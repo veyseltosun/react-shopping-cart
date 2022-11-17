@@ -1,14 +1,15 @@
 import React from 'react';
 import {useGlobalContext} from "./context";
 
-function CartItem({id, img, title, price, amount}) {
+function CartItem({id, img, title, price, amount }) {
+  const{remove} = useGlobalContext();
   return (
     <article className='cart-item'>
             <img src={img} alt={title} />
             <div className="">
                 <h4>{title}</h4>
                 <h4 className='item-price'>${price}</h4>
-                <button className='remove-btn' onClick={()=> console.log("remove")}>remove</button>
+                <button className='remove-btn' onClick={() => remove(id)}>remove</button>
 
             </div>
             <div>
