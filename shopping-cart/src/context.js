@@ -33,6 +33,19 @@ const AppProvider =({children}) =>{
 
     },[state.cart])
 
+    const fetchData = async () =>{
+        dispatch({type :"LOADING"});
+        const response = await fetch(url);
+        const cart = response.json();
+        dispatch({type:"DISPLAY_ITEMS", payload:cart})
+
+
+    }
+
+    useEffect (() =>{
+        fetchData()
+    }, [])
+
  return(
     <AppContext.Provider value={{...state, clearCart, remove, increase, decrease, }}>{children}</AppContext.Provider>
  )
