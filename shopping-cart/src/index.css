@@ -108,6 +108,14 @@ Variables
     color: var(--clr-primary);
     background: var(--clr-primary-light);
   }
+  .buy-btn {
+    border-radius: 5px;
+    margin-top: 30px;
+    
+
+    
+
+  }
   
   /*
   =============== 
@@ -266,5 +274,11 @@ Variables
     background: var(--clr-grey-5);
     border-color: transparent;
     border-width: 0.25px;
+  }
+
+  .buttons{
+    
+    display: flex;
+    justify-content: space-evenly;
   }
   

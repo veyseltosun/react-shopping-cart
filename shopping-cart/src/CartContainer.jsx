@@ -26,14 +26,21 @@ function CartContainer() {
               return <CartItem key={item.id} {...item}/>
             })}
         </div>
-        <footer>
+        <footer >
             <hr/>
             <div className='cart-total'>
                 <h4>
                     total <span>${total}</span>
                 </h4>
             </div>
-            <button className='btn clear-btn' onClick={clearCart}>clear cart</button>
+            <div className="buttons">
+            
+             <button className='btn clear-btn' onClick={clearCart}>clear cart</button>
+            
+             <button className='btn buy-btn'>buy</button>
+
+
+            </div>
         </footer>
 
     </div>
